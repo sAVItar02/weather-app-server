@@ -5,11 +5,14 @@ const app = express();
 const Geocode = require('../Utils/geocode');
 const Forecast = require('../Utils/forecast');
 
+const port = process.env.PORT || 3000
 
+//Path variables
 const publicDirPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialspath = path.join(__dirname, '../templates/partials');
 
+//hbs config
 app.set('view engine' , 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialspath);
@@ -88,6 +91,6 @@ app.get('*', (req, res) => {
     res.render('error');
 })
 
-app.listen(3000, () => {
-    console.log("Server listening on port 3000");
+app.listen(port, () => {
+    console.log("Server listening on port " + port);
 })
