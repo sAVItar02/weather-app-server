@@ -1,0 +1,58 @@
+<style>
+    html{
+        height: 100%;
+    }
+    body{
+        min-height: 100%;
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        background-color: burlywood;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-left: 100px;
+    }
+
+    .navbar a{
+        text-decoration: none;
+        color: #011e49;
+        font-size: 20px;
+        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        transition: ease 0.2s;
+    }
+
+    .navbar a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        z-index: -1;
+        background-color: rgb(219, 162, 87);
+        transition: 0.1s linear;
+    }
+
+    .navbar a:hover::before{
+        height: 100%;
+    }
+
+
+</style>
+
+
+<div class="navbar">
+    <a href="/">Weather</a>
+    <a href="/about">About</a>
+    <a href="/help">Help</a>
+</div>
