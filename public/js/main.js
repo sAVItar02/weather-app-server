@@ -5,6 +5,7 @@ const temperature = document.querySelector('.temperature')
 const humidity = document.querySelector('.humidity')
 const icon = document.querySelector('.icon')
 const loader = document.querySelector('.loader')
+const locationField = document.querySelector('.location')
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -34,6 +35,7 @@ weatherForm.addEventListener('submit', (e) => {
 function ClearInfo(){
     loader.style.display = 'block'
 
+    locationField.textContent = ''
     description.textContent = ''
     temperature.textContent = ''
     humidity.textContent = ''
@@ -42,6 +44,7 @@ function ClearInfo(){
 
 function DisplayInfo(data){
     loader.style.display = 'none'
+    locationField.textContent = 'Showing Weather for ' + data.location
     description.textContent = data.description
     temperature.textContent = 'The temperature is ' + data.temperature + ' and it feels like ' + data.feelslike
     humidity.textContent = 'Humidity is ' + data.humidity

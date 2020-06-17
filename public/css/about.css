@@ -1,0 +1,26 @@
+body{
+    color: #0D47A1;
+}
+
+p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.mapbox-call{
+    padding: 10px 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #0D47A1;
+    transition: 0.2s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mapbox-call:hover {
+    background-color: #0D47A1;
+    color: #FFF;
+}

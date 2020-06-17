@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/about.css">
     <link rel="icon" href="/imgs/weather.png">
 
     <title>About</title>
@@ -12,8 +13,20 @@
 <body>
     {{>header}}
 
-    <h1>About Page</h1>
+    <section class="container">
+        <h1>About APIs used</h1>
+
+        <p>Geocode API from <a href="https://www.mapbox.com/" target="_blank">Mapbox</a></p>
+        <div class="mapbox">
+            <button class="mapbox-call">Click to see a sample response</button>
+            <div class="call">
+
+            </div>
+        </div>
+    </section>
 
     {{>footer}}
+
+    <script src="/js/about.js"></script>
 </body>
 </html>
